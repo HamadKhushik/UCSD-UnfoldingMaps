@@ -101,7 +101,7 @@ public class EarthquakeCityMap extends PApplet {
 		}
 	    
 		//     STEP 3: read in earthquake RSS feed
-	    List<PointFeature> earthquakes = ParseFeed.parseEarthquake(this, earthquakesURL);
+	    List<PointFeature> earthquakes = ParseFeed.parseEarthquake(this, "quiz2.atom");
 	    quakeMarkers = new ArrayList<Marker>();
 	    
 	    for(PointFeature feature : earthquakes) {
@@ -116,7 +116,8 @@ public class EarthquakeCityMap extends PApplet {
 	    }
 
 	    // could be used for debugging
-	    printQuakes();
+	    //printQuakes();
+	    sortAndPrint(30);
 	 		
 	    // (3) Add markers to map
 	    //     NOTE: Country markers are not added to the map.  They are used
@@ -137,7 +138,43 @@ public class EarthquakeCityMap extends PApplet {
 	
 	
 	// TODO: Add the method:
-	//   private void sortAndPrint(int numToPrint)
+	   private void sortAndPrint(int numToPrint) {
+		   																// casting Marker to EarthquakeMarker below
+		   EarthquakeMarker[] earthquakeArray = quakeMarkers.toArray(new EarthquakeMarker[quakeMarkers.size()]);
+		   earthquakeArray = sort(earthquakeArray);
+		   
+		   if (numToPrint > earthquakeArray.length) {
+			   numToPrint = earthquakeArray.length;
+		   }
+		   
+		   for (int i = 0; i < numToPrint; i++) {
+			   //System.out.println(((EarthquakeMarker) earthquakeArray[i]).getStringProperty("Country")+ " : " + ((Feature) earthquakeArray[i]).getStringProperty("Magnitude"));
+			   EarthquakeMarker marker = earthquakeArray[i];
+			   System.out.println(marker.getTitle() + "Magnitude: " + marker.getMagnitude());
+		   }
+		   
+	   }
+	   
+	   private EarthquakeMarker[] sort(EarthquakeMarker[] vals) {  // sorts the array using the .compareTo method. sort is used in printAndSort method above
+		   
+		   int indexMin;
+		   for (int i = 0; i < vals.length-1; i++) {
+			   indexMin = i;
+			   for (int j = i +1; j< vals.length; j++) {
+				   if ((((EarthquakeMarker) vals[j]).compareTo((EarthquakeMarker) vals[indexMin])) > 0) {
+					   indexMin = j;
+				   }
+			   }
+			   swap(vals, indexMin, i);
+		   }
+		   return vals;
+	   }
+	   
+	   public void swap(Object[] vals, int s1, int s2) {  // swaps two elements in an array, used in sort method above
+		   Object temp = vals[s1];
+		   vals[s1] = vals[s2];
+		   vals[s2] = temp;
+	   }
 	// and then call that method from setUp
 	
 	/** Event handler that gets called automatically when the 

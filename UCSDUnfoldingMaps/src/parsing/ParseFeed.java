@@ -162,18 +162,22 @@ public class ParseFeed {
 			point.setId(columns[0]);
 			
 			// get other fields from csv
-			point.addProperty("name", columns[1]);
-			point.putProperty("city", columns[2]);
-			point.putProperty("country", columns[3]);
+			point.addProperty("name", columns[1].replace("\"", ""));
+			point.putProperty("city", columns[2].replace("\"", ""));
+			point.putProperty("country", columns[3].replace("\"", ""));
+			
+			point.putProperty("Id", columns[0]);
+			point.putProperty("loc", loc);
+			//point.putProperty("lon", columns[7]);
 			
 			// pretty sure IATA/FAA is used in routes.dat
 			// get airport IATA/FAA code
-			if(!columns[4].equals("")) {
-				point.putProperty("code", columns[4]);
+			if( (!columns[4].equals("")) && (!columns[4].equals("\"\"")) ) {
+				point.putProperty("code", columns[4].replace("\"", ""));
 			}
 			// get airport ICAO code if no IATA
-			else if(!columns[5].equals("")) {
-				point.putProperty("code", columns[5]);
+			else if( (!columns[5].equals(""))  && (!columns[5].equals("\"\"")) ) {
+				point.putProperty("code", columns[5].replace("\"", ""));
 			}
 			
 			point.putProperty("altitude", columns[8 + i]);
@@ -215,6 +219,8 @@ public class ParseFeed {
 				route.putProperty("source", columns[3]);
 				// "destination property" -- OpenFlights identifier
 				route.putProperty("destination", columns[5]);
+				route.putProperty("sCode", columns[2]);
+				route.putProperty("dCode", columns[4]);
 				
 				routes.add(route);
 			}
