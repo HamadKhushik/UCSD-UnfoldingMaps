@@ -32,7 +32,7 @@ public class AirportMap extends PApplet {
 
 	private CommonMarker lastSelected;
 	private CommonMarker lastClicked;
-	private HashSet<String> set;
+	private HashSet<String> set;  // for Airport codes on routes out of a particular airport. Used in checkAirportsForClick()
 	private String country; // for user input
 
 	public void setup() {
