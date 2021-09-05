@@ -2,12 +2,13 @@
   
 Outline
 ---------
-1. This is an interactive map designed with the help of Unfolding maps library, Processing library.
-2. Two different types of data has been included in this, earthquake dataset and airport dataset. Earthquakes have been drawn in the shape of markers, color coded with extra keys for recent, high magnitude, low magnitude, in the sea and on the land. 
+1. This is an interactive map designed with the help of Unfolding maps library and Processing library.
+2. Two different types of data has been included in this program i-e earthquake dataset and airport dataset. Earthquakes have been drawn in the shape of markers, color coded with different colours and shapes for recent, high magnitude, low magnitude, in the sea and on the land earthquakes. 
 3. Map key has been added on the left of the map.
-4. Second data is the Airport dataset, all the airports are shown in the map. if one airport is clicked, all other airports will dissappear until yet another click. All the routes out of an airports are shown when an aiport is clicked. A particular airport can be searched based on the input to the program. All th airports in a country can be searhed as well
-5. Labels have been added to the markers(Airports, Earthquakes, cities) on the map, which are shown on hoover
-6. 
+4. Second data is the Airport dataset, all the airports are shown on the map. 
+5.This has been made interactive with mouse clicks. All the routes out of an airports are shown when an aiport is clicked. All airports in a country can be searched based on the input to the program. 
+6. Labels have been added to the markers(Airports, Earthquakes, cities) on the map, which are shown on hoover
+
 ------------------------------------------------------------------------------------------------------------- 
   
   
@@ -26,6 +27,9 @@ Earthquake key has been added on the top left side of the map.
 Earthquakes which have recently occured have been distinguished with an 'X' mark drawn on top of them.  
 Hoover effect has been added to the appplication and a label is shown every time mouse hoovers over any marker   
 Some output from the program is attached below
+  
+  
+    
 ![](https://github.com/HamadKhushik/UCSD-UnfoldingMaps-Module5/blob/master/UCSDUnfoldingMaps/images/EarthquakeFinal.PNG)
 
 Extension
@@ -36,8 +40,13 @@ The program has been extended to include the following features
 2. if the user clicks on any airport, the program will show all the routes out of that airport and the destination airports. Remaining airports will dissappear from the map.
 3. on second click all the routes will dissappear and the remaining airports will re-appear.  
 if the user clicks on any other airport, all the routes out of that airport are shown.
-4. Some output from the program is shown below
-![](https://github.com/HamadKhushik/UCSD-UnfoldingMaps-Module5/blob/master/UCSDUnfoldingMaps/images/UnfoldingMaps.png)
+4. Some output from the program is shown below  
+  
+    
+    
+![](https://github.com/HamadKhushik/UCSD-UnfoldingMaps-Module5/blob/master/UCSDUnfoldingMaps/images/UnfoldingMaps.png)  
+  
+  
 ![](https://github.com/HamadKhushik/UCSD-UnfoldingMaps-Module5/blob/master/UCSDUnfoldingMaps/images/final%20assignment%20screenshot2.png)
 
 NOTE: in some airports, there are no routes(in the dataset used)!
