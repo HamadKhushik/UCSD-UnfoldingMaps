@@ -9,8 +9,9 @@
   
 Outline
 ---------
-This is an interactive map designed with the help of Unfolding maps library, Processing library and Google maps API.
-Two different types of data has been included in this, earthquake dataset and airport dataset. Earthquakes have been drawn in the shape of markers, color coded with extra keys for recent, high magnitude, low magnitude, in the sea and on the land. Map key has been added on the left of the map.
+This is an interactive map designed with the help of Unfolding maps library, Processing library and Google maps API.  
+Two different types of datasets have been included in this, earthquake dataset and airport dataset.   
+Earthquakes have been drawn in the shape of markers, color coded with extra keys for recent, high magnitude, low magnitude, in the sea and on the land. Map key has been added on the left of the map.
 Second data is the Airport dataset, all the airports are shown in the map. if one airport is clicked, other airports dissappear until another click. All the routes out of an airports are shown when an aiport is clicked. A particular airport can be searched based on the input to the program
 Labels have been added to the markers on the map, which are shown on hoover
 
@@ -31,7 +32,7 @@ Earthquakes which have recently occured have been distinguished with an 'X' mark
 Hoover effect has been added to the appplication and a label is shown every time mouse hoovers over a marker    
 
 
-In the extension, the users enters the name of the country to view the airports only of that country or just press enter to view the airports of the world
+In the extension, the users enter the name of the country to view the airports only of that country or just press enter to view the airports of the world
 
 if the user clicks on any airport, the program shows all the routes out of that airport and the destination airports
 
