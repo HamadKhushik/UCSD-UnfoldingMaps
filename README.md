@@ -20,15 +20,15 @@ Description
 -----------------
 
 
-  Two datasets have been used in this program i-e the Earthquake dataset and the Airport dataset. The airport dataset has been implemented in the extension(Described below)
+- The airport dataset has been implemented in the extension(Described below)
 
-Earthquake data has been plotted on the map. The earthquake’s magnitude has been colour-coded in red, yellow and blue.   
-All the cities have been plotted in a triangular shape on the map.  
-Methods have been implemented to determine whether the earthquake is on land or sea.
-The earthquake key has been added on the top left side of the map.  
-Earthquakes that have recently occurred have been distinguished with an 'X' mark drawn.  
-The Hoover effect has been added to the application, and a label is shown every time the mouse hovers over any marker.   
-Some output from the program is attached below.
+- Earthquake data has been plotted on the map. The earthquake’s magnitude has been colour-coded in red, yellow and blue.   
+- All the cities have been plotted in a triangular shape on the map.  
+- Methods have been implemented to determine whether the earthquake is on land or sea.
+- The earthquake key has been added on the top left side of the map.  
+- Earthquakes that have recently occurred have been distinguished with an 'X' mark drawn.  
+- The Hoover effect has been added to the application, and a label is shown every time the mouse hovers over any marker.   
+- Some output from the program is attached below.
   
   
     
